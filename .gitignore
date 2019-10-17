@@ -1,0 +1,5 @@
+
+data/spooky-author-identification/* 
+fastText/*
+data/cooking.stackexchange/*
+__pycache__
