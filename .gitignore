@@ -3,3 +3,4 @@ data/spooky-author-identification/*
 fastText/*
 data/cooking.stackexchange/*
 __pycache__
+.idea/
