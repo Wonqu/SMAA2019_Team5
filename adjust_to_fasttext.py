@@ -18,4 +18,4 @@ for row in spooks .iterrows():
 
 df = pd.DataFrame(merged_csv, columns=['label', 'text'])
 print(df)
-pd.DataFrame(df).to_csv("data/out/spook_to_fasttext.csv")
+pd.DataFrame(df).to_csv("data/out/spook_to_fasttext.csv", index=False, sep=' ', header=False)
