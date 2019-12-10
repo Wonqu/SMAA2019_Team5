@@ -33,3 +33,14 @@ head -n 3000 SMAA2019_Team5/data/out/spook_to_fasttext.csv > spook.valid
 tail -n 22958 SMAA2019_Team5/data/out/spook_to_fasttext.csv > spook.train
 ./fasttext supervised -input spook.train -output model_spook
 ./fasttext test model_spook.bin spook.valid
+
+With additional vector:
+
+./fasttext supervised -input spook.train -output model_spook -dim 300 -pretrainedVectors wiki-news-300d-1M-subword.vec
+
+With additional parameters:
+
+./fasttext supervised -input spook.train -output model_spook \
+-dim 300 -pretrainedVectors wiki-news-300d-1M-subword.vec \
+-epoch 25 -wordNgrams 2 -loss hs -lr 0.5
+;
