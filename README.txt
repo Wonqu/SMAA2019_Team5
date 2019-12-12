@@ -44,3 +44,13 @@ With additional parameters:
 -dim 300 -pretrainedVectors wiki-news-300d-1M-subword.vec \
 -epoch 25 -wordNgrams 2 -loss hs -lr 0.5
 ;
+
+
+
+
+LSTM setup
+
+1. Go to https://nlp.stanford.edu/projects/glove/ and download glove.6B.zip
+2. Unzip and copy glove.6B.100d.txt into project's dir
+4. pip install -r requirements.txt
+3. python lovecraftian_LSTM.py 

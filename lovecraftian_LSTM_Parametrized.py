@@ -37,22 +37,22 @@ def preprocess_text(sen):
     sentence = re.sub(r'\s+', ' ', sentence)
 
     return sentence
-toxic_comments = pd.read_csv('data/out/spook_to_lstm.csv')
+spooky_text = pd.read_csv('data/out/spook_to_lstm.csv')
 
 
-print(toxic_comments.head())
+print(spooky_text.head())
 
-filter = toxic_comments["text"] != ""
-toxic_comments = toxic_comments[filter]
-toxic_comments = toxic_comments.dropna()
+filter = spooky_text["text"] != ""
+spooky_text = spooky_text[filter]
+spooky_text = spooky_text.dropna()
 
-toxic_comments_labels = toxic_comments[["is_HPL", "is_EAP", "is_MWS"]]
+spooky_text_labels = spooky_text[["is_HPL", "is_EAP", "is_MWS"]]
 X = []
-sentences = list(toxic_comments["text"])
+sentences = list(spooky_text["text"])
 for sen in sentences:
     X.append(preprocess_text(sen))
 
-y = toxic_comments_labels.values
+y = spooky_text_labels.values
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20, random_state=42)
 
 
