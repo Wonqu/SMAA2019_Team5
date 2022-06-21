@@ -21,7 +21,7 @@ Keras==2.3.1
 Keras-Applications==1.0.8
 Keras-Preprocessing==1.1.0
 matplotlib==2.2.4
-numpy==1.16.5
+numpy==1.22.0
 regex==2019.11.1
 scikit-learn==0.20.4
 scipy==1.2.2
